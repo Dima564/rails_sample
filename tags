@@ -41,6 +41,7 @@ ProductsHelper	app/helpers/products_helper.rb	/^module ProductsHelper$/;"	m
 StoreController	app/controllers/store_controller.rb	/^class StoreController < ApplicationController$/;"	c
 StoreControllerTest	test/controllers/store_controller_test.rb	/^class StoreControllerTest < ActionController::TestCase$/;"	c
 StoreHelper	app/helpers/store_helper.rb	/^module StoreHelper$/;"	m
+add_line_items_from_cart	app/models/order.rb	/^  def add_line_items_from_cart(cart)$/;"	f	class:Order
 add_product	app/models/cart.rb	/^  def add_product(product_id)$/;"	f	class:Cart
 cart_params	app/controllers/carts_controller.rb	/^    def cart_params$/;"	f	class:CartsController
 change	db/migrate/20150702201732_create_products.rb	/^  def change$/;"	f	class:CreateProducts
@@ -98,3 +99,4 @@ update	app/controllers/carts_controller.rb	/^  def update$/;"	f	class:CartsContr
 update	app/controllers/line_items_controller.rb	/^  def update$/;"	f	class:LineItemsController
 update	app/controllers/orders_controller.rb	/^  def update$/;"	f	class:OrdersController
 update	app/controllers/products_controller.rb	/^  def update$/;"	f	class:ProductsController
+who_bought	app/controllers/products_controller.rb	/^  def who_bought$/;"	f	class:ProductsController
