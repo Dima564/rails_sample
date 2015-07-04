@@ -11,6 +11,7 @@ AddQuantityToLineItems	db/migrate/20150704055241_add_quantity_to_line_items.rb	/
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Depot
 ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
 Cart	app/models/cart.rb	/^class Cart < ActiveRecord::Base$/;"	c
 CartTest	test/models/cart_test.rb	/^class CartTest < ActiveSupport::TestCase$/;"	c
 CartsController	app/controllers/carts_controller.rb	/^class CartsController < ApplicationController$/;"	c
@@ -29,6 +30,9 @@ LineItemsController	app/controllers/line_items_controller.rb	/^class LineItemsCo
 LineItemsControllerTest	test/controllers/line_items_controller_test.rb	/^class LineItemsControllerTest < ActionController::TestCase$/;"	c
 LineItemsHelper	app/helpers/line_items_helper.rb	/^module LineItemsHelper$/;"	m
 Order	app/models/order.rb	/^class Order < ActiveRecord::Base$/;"	c
+OrderNotifier	app/mailers/order_notifier.rb	/^class OrderNotifier < ApplicationMailer$/;"	c
+OrderNotifierPreview	test/mailers/previews/order_notifier_preview.rb	/^class OrderNotifierPreview < ActionMailer::Preview$/;"	c
+OrderNotifierTest	test/mailers/order_notifier_test.rb	/^class OrderNotifierTest < ActionMailer::TestCase$/;"	c
 OrderTest	test/models/order_test.rb	/^class OrderTest < ActiveSupport::TestCase$/;"	c
 OrdersController	app/controllers/orders_controller.rb	/^class OrdersController < ApplicationController$/;"	c
 OrdersControllerTest	test/controllers/orders_controller_test.rb	/^class OrdersControllerTest < ActionController::TestCase$/;"	c
@@ -41,6 +45,7 @@ ProductsHelper	app/helpers/products_helper.rb	/^module ProductsHelper$/;"	m
 StoreController	app/controllers/store_controller.rb	/^class StoreController < ApplicationController$/;"	c
 StoreControllerTest	test/controllers/store_controller_test.rb	/^class StoreControllerTest < ActionController::TestCase$/;"	c
 StoreHelper	app/helpers/store_helper.rb	/^module StoreHelper$/;"	m
+UserStoriesTest	test/integration/user_stories_test.rb	/^class UserStoriesTest < ActionDispatch::IntegrationTest$/;"	c
 add_line_items_from_cart	app/models/order.rb	/^  def add_line_items_from_cart(cart)$/;"	f	class:Order
 add_product	app/models/cart.rb	/^  def add_product(product_id)$/;"	f	class:Cart
 cart_params	app/controllers/carts_controller.rb	/^    def cart_params$/;"	f	class:CartsController
@@ -83,11 +88,15 @@ new	app/controllers/products_controller.rb	/^  def new$/;"	f	class:ProductsContr
 new_product	test/models/product_test.rb	/^  def new_product(image_url) Product.new(title: 'My Book Title',$/;"	f	class:ProductTest
 order_params	app/controllers/orders_controller.rb	/^    def order_params$/;"	f	class:OrdersController
 product_params	app/controllers/products_controller.rb	/^    def product_params$/;"	f	class:ProductsController
+received	app/mailers/order_notifier.rb	/^  def received(order)$/;"	f	class:OrderNotifier
+received	test/mailers/previews/order_notifier_preview.rb	/^  def received$/;"	f	class:OrderNotifierPreview
 set_cart	app/controllers/carts_controller.rb	/^    def set_cart$/;"	f	class:CartsController
 set_cart	app/controllers/concerns/current_cart.rb	/^    def set_cart$/;"	f	class:CurrentCart
 set_line_item	app/controllers/line_items_controller.rb	/^    def set_line_item$/;"	f	class:LineItemsController
 set_order	app/controllers/orders_controller.rb	/^    def set_order$/;"	f	class:OrdersController
 set_product	app/controllers/products_controller.rb	/^    def set_product$/;"	f	class:ProductsController
+shipped	app/mailers/order_notifier.rb	/^  def shipped(order)$/;"	f	class:OrderNotifier
+shipped	test/mailers/previews/order_notifier_preview.rb	/^  def shipped$/;"	f	class:OrderNotifierPreview
 show	app/controllers/carts_controller.rb	/^  def show$/;"	f	class:CartsController
 show	app/controllers/line_items_controller.rb	/^  def show$/;"	f	class:LineItemsController
 show	app/controllers/orders_controller.rb	/^  def show$/;"	f	class:OrdersController
