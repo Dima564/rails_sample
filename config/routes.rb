@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
 
 
-  root 'store#index', as: 'store'
 
   get 'admin' => 'admin#index'
   controller :sessions do
@@ -12,14 +11,17 @@ Rails.application.routes.draw do
   end
 
   resources :users
-  resources :orders
-  resources :carts
-
-  resources :line_items do
-    member do
-      put 'decrement'
+  # scope '(:locale)' do
+    root 'store#index', as: 'store', via: :all
+    resources :orders
+    resources :carts
+    resources :line_items do
+      member do
+        put 'decrement'
+      end
     end
-  end
+  # end
+
 
 
   resources :products do

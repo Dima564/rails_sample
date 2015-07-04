@@ -77,6 +77,7 @@ create	app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:Session
 create	app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
 decrement	app/controllers/line_items_controller.rb	/^  def decrement$/;"	f	class:LineItemsController
 decrement	app/models/line_item.rb	/^  def decrement$/;"	f	class:LineItem
+default_url_options	app/controllers/application_controller.rb	/^    def default_url_options$/;"	f	class:ApplicationController
 destroy	app/controllers/carts_controller.rb	/^  def destroy$/;"	f	class:CartsController
 destroy	app/controllers/line_items_controller.rb	/^  def destroy$/;"	f	class:LineItemsController
 destroy	app/controllers/orders_controller.rb	/^  def destroy$/;"	f	class:OrdersController
@@ -118,10 +119,11 @@ received	app/mailers/order_notifier.rb	/^  def received(order)$/;"	f	class:Order
 received	test/mailers/previews/order_notifier_preview.rb	/^  def received$/;"	f	class:OrderNotifierPreview
 set_cart	app/controllers/carts_controller.rb	/^    def set_cart$/;"	f	class:CartsController
 set_cart	app/controllers/concerns/current_cart.rb	/^    def set_cart$/;"	f	class:CurrentCart
+set_i18n_locale_from_params	app/controllers/application_controller.rb	/^    def set_i18n_locale_from_params$/;"	f	class:ApplicationController
 set_line_item	app/controllers/line_items_controller.rb	/^    def set_line_item$/;"	f	class:LineItemsController
 set_order	app/controllers/orders_controller.rb	/^    def set_order$/;"	f	class:OrdersController
 set_product	app/controllers/products_controller.rb	/^    def set_product$/;"	f	class:ProductsController
-set_user	app/controllers/users_controller.rb	/^    def set_user$/;"	f	class:UsersController.destroy
+set_user	app/controllers/users_controller.rb	/^    def set_user$/;"	f	class:UsersController
 setup	test/test_helper.rb	/^def setup$/;"	f	class:ActiveSupport
 shipped	app/mailers/order_notifier.rb	/^  def shipped(order)$/;"	f	class:OrderNotifier
 shipped	test/mailers/previews/order_notifier_preview.rb	/^  def shipped$/;"	f	class:OrderNotifierPreview
@@ -138,5 +140,5 @@ update	app/controllers/line_items_controller.rb	/^  def update$/;"	f	class:LineI
 update	app/controllers/orders_controller.rb	/^  def update$/;"	f	class:OrdersController
 update	app/controllers/products_controller.rb	/^  def update$/;"	f	class:ProductsController
 update	app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController
-user_params	app/controllers/users_controller.rb	/^    def user_params$/;"	f	class:UsersController.destroy
+user_params	app/controllers/users_controller.rb	/^    def user_params$/;"	f	class:UsersController
 who_bought	app/controllers/products_controller.rb	/^  def who_bought$/;"	f	class:ProductsController
