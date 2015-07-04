@@ -5,6 +5,7 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddOrderToLineItem	db/migrate/20150704141436_add_order_to_line_item.rb	/^class AddOrderToLineItem < ActiveRecord::Migration$/;"	c
 AddProductPriceToLineItem	db/migrate/20150704075523_add_product_price_to_line_item.rb	/^class AddProductPriceToLineItem < ActiveRecord::Migration$/;"	c
 AddQuantityToLineItems	db/migrate/20150704055241_add_quantity_to_line_items.rb	/^class AddQuantityToLineItems < ActiveRecord::Migration$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Depot
@@ -18,6 +19,7 @@ CartsHelper	app/helpers/carts_helper.rb	/^module CartsHelper$/;"	m
 CombineItemsInCart	db/migrate/20150704064240_combine_items_in_cart.rb	/^class CombineItemsInCart < ActiveRecord::Migration$/;"	c
 CreateCarts	db/migrate/20150703112708_create_carts.rb	/^class CreateCarts < ActiveRecord::Migration$/;"	c
 CreateLineItems	db/migrate/20150703113109_create_line_items.rb	/^class CreateLineItems < ActiveRecord::Migration$/;"	c
+CreateOrders	db/migrate/20150704141352_create_orders.rb	/^class CreateOrders < ActiveRecord::Migration$/;"	c
 CreateProducts	db/migrate/20150702201732_create_products.rb	/^class CreateProducts < ActiveRecord::Migration$/;"	c
 CurrentCart	app/controllers/concerns/current_cart.rb	/^module CurrentCart extend ActiveSupport::Concern$/;"	m
 Depot	config/application.rb	/^module Depot$/;"	m
@@ -26,6 +28,11 @@ LineItemTest	test/models/line_item_test.rb	/^class LineItemTest < ActiveSupport:
 LineItemsController	app/controllers/line_items_controller.rb	/^class LineItemsController < ApplicationController$/;"	c
 LineItemsControllerTest	test/controllers/line_items_controller_test.rb	/^class LineItemsControllerTest < ActionController::TestCase$/;"	c
 LineItemsHelper	app/helpers/line_items_helper.rb	/^module LineItemsHelper$/;"	m
+Order	app/models/order.rb	/^class Order < ActiveRecord::Base$/;"	c
+OrderTest	test/models/order_test.rb	/^class OrderTest < ActiveSupport::TestCase$/;"	c
+OrdersController	app/controllers/orders_controller.rb	/^class OrdersController < ApplicationController$/;"	c
+OrdersControllerTest	test/controllers/orders_controller_test.rb	/^class OrdersControllerTest < ActionController::TestCase$/;"	c
+OrdersHelper	app/helpers/orders_helper.rb	/^module OrdersHelper$/;"	m
 Product	app/models/product.rb	/^class Product < ActiveRecord::Base$/;"	c
 ProductTest	test/models/product_test.rb	/^class ProductTest < ActiveSupport::TestCase$/;"	c
 ProductsController	app/controllers/products_controller.rb	/^class ProductsController < ApplicationController$/;"	c
@@ -40,20 +47,29 @@ change	db/migrate/20150702201732_create_products.rb	/^  def change$/;"	f	class:C
 change	db/migrate/20150703112708_create_carts.rb	/^  def change$/;"	f	class:CreateCarts
 change	db/migrate/20150703113109_create_line_items.rb	/^  def change$/;"	f	class:CreateLineItems
 change	db/migrate/20150704055241_add_quantity_to_line_items.rb	/^  def change$/;"	f	class:AddQuantityToLineItems
+change	db/migrate/20150704141352_create_orders.rb	/^  def change$/;"	f	class:CreateOrders
+change	db/migrate/20150704141436_add_order_to_line_item.rb	/^  def change$/;"	f	class:AddOrderToLineItem
 create	app/controllers/carts_controller.rb	/^  def create$/;"	f	class:CartsController
 create	app/controllers/line_items_controller.rb	/^  def create$/;"	f	class:LineItemsController
+create	app/controllers/orders_controller.rb	/^  def create$/;"	f	class:OrdersController
 create	app/controllers/products_controller.rb	/^  def create$/;"	f	class:ProductsController
+decrement	app/controllers/line_items_controller.rb	/^  def decrement$/;"	f	class:LineItemsController
+decrement	app/models/line_item.rb	/^  def decrement$/;"	f	class:LineItem
 destroy	app/controllers/carts_controller.rb	/^  def destroy$/;"	f	class:CartsController
 destroy	app/controllers/line_items_controller.rb	/^  def destroy$/;"	f	class:LineItemsController
+destroy	app/controllers/orders_controller.rb	/^  def destroy$/;"	f	class:OrdersController
 destroy	app/controllers/products_controller.rb	/^  def destroy$/;"	f	class:ProductsController
 down	db/migrate/20150704064240_combine_items_in_cart.rb	/^  def down$/;"	f	class:CombineItemsInCart
 down	db/migrate/20150704075523_add_product_price_to_line_item.rb	/^  def self.down$/;"	F	class:AddProductPriceToLineItem
 edit	app/controllers/carts_controller.rb	/^  def edit$/;"	f	class:CartsController
 edit	app/controllers/line_items_controller.rb	/^  def edit$/;"	f	class:LineItemsController
+edit	app/controllers/orders_controller.rb	/^  def edit$/;"	f	class:OrdersController
 edit	app/controllers/products_controller.rb	/^  def edit$/;"	f	class:ProductsController
 ensure_not_referenced_by_any_line_item	app/models/product.rb	/^  def ensure_not_referenced_by_any_line_item$/;"	f	class:Product
+hidden_div_if	app/helpers/application_helper.rb	/^  def hidden_div_if(condition, attributes = {}, &block)$/;"	f	class:ApplicationHelper
 index	app/controllers/carts_controller.rb	/^  def index$/;"	f	class:CartsController
 index	app/controllers/line_items_controller.rb	/^  def index$/;"	f	class:LineItemsController
+index	app/controllers/orders_controller.rb	/^  def index$/;"	f	class:OrdersController
 index	app/controllers/products_controller.rb	/^  def index$/;"	f	class:ProductsController
 index	app/controllers/store_controller.rb	/^  def index$/;"	f	class:StoreController
 invalid_cart	app/controllers/carts_controller.rb	/^    def invalid_cart$/;"	f	class:CartsController
@@ -61,19 +77,24 @@ latest	app/models/product.rb	/^  def self.latest$/;"	F	class:Product
 line_item_params	app/controllers/line_items_controller.rb	/^    def line_item_params$/;"	f	class:LineItemsController
 new	app/controllers/carts_controller.rb	/^  def new$/;"	f	class:CartsController
 new	app/controllers/line_items_controller.rb	/^  def new$/;"	f	class:LineItemsController
+new	app/controllers/orders_controller.rb	/^  def new$/;"	f	class:OrdersController
 new	app/controllers/products_controller.rb	/^  def new$/;"	f	class:ProductsController
 new_product	test/models/product_test.rb	/^  def new_product(image_url) Product.new(title: 'My Book Title',$/;"	f	class:ProductTest
+order_params	app/controllers/orders_controller.rb	/^    def order_params$/;"	f	class:OrdersController
 product_params	app/controllers/products_controller.rb	/^    def product_params$/;"	f	class:ProductsController
 set_cart	app/controllers/carts_controller.rb	/^    def set_cart$/;"	f	class:CartsController
 set_cart	app/controllers/concerns/current_cart.rb	/^    def set_cart$/;"	f	class:CurrentCart
 set_line_item	app/controllers/line_items_controller.rb	/^    def set_line_item$/;"	f	class:LineItemsController
+set_order	app/controllers/orders_controller.rb	/^    def set_order$/;"	f	class:OrdersController
 set_product	app/controllers/products_controller.rb	/^    def set_product$/;"	f	class:ProductsController
 show	app/controllers/carts_controller.rb	/^  def show$/;"	f	class:CartsController
 show	app/controllers/line_items_controller.rb	/^  def show$/;"	f	class:LineItemsController
+show	app/controllers/orders_controller.rb	/^  def show$/;"	f	class:OrdersController
 show	app/controllers/products_controller.rb	/^  def show$/;"	f	class:ProductsController
 total_price	app/models/cart.rb	/^  def total_price$/;"	f	class:Cart
 up	db/migrate/20150704064240_combine_items_in_cart.rb	/^  def up$/;"	f	class:CombineItemsInCart
 up	db/migrate/20150704075523_add_product_price_to_line_item.rb	/^  def self.up$/;"	F	class:AddProductPriceToLineItem
 update	app/controllers/carts_controller.rb	/^  def update$/;"	f	class:CartsController
 update	app/controllers/line_items_controller.rb	/^  def update$/;"	f	class:LineItemsController
+update	app/controllers/orders_controller.rb	/^  def update$/;"	f	class:OrdersController
 update	app/controllers/products_controller.rb	/^  def update$/;"	f	class:ProductsController
